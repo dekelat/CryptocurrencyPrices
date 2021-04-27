@@ -1,0 +1,425 @@
+*{
+    font-family: 'Crushed';
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    padding-top: 200px;
+    background-image: url("sources/bng.png");
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-attachment: fixed;
+}
+
+button:focus {
+    outline: none;
+}
+
+.hide {
+    display: none;
+}
+
+.error-msg {
+    display: none;
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    width: 50%;
+    margin: auto;
+    border: solid 2px rgb(17, 69, 56);
+    overflow: auto;
+}
+.error-msg img {
+    width: 80%;
+}
+
+.about-text {
+    border-radius: 5px;
+    border: solid 2px rgb(17, 69, 56);
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 2rem 4rem;
+    overflow: auto;
+    display: flex;
+}
+.about-text p {
+    font-size: large;
+    text-align: left;
+}
+.about-text img {
+    width: 30%;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.page-load {
+    text-align: center;
+    width: 500px;
+    display: hide;
+    position: absolute;
+    right: 45%;
+}
+
+/************* Navbar *************/
+.navbar button {
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    color: rgb(22, 29, 35);
+}
+.navbar button:hover {
+    text-shadow: 3px 5px 3px rgb(188, 197, 180);
+}
+.navbar.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+}
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: rgb(22, 29, 35);
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 7px;
+}
+.logo {
+    width: 50%;
+    margin-top: 20px;
+}
+/********* Search **********/
+.navbar-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.inner-addon { 
+    position: relative; /* enable absolute positioning */
+}
+.inner-addon .fas {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.right-addon .fas { 
+    right: 0px; /* align icon */
+    padding-top: 6px;  
+    color: rgb(22, 29, 35);
+}
+.right-addon input { 
+    padding-right: 30px; /* space between icon and placeholder */
+}
+
+/************* Home View Coin Card *************/
+.coin-card {
+    border-radius: 3px;
+    border: solid 1px rgb(94, 141, 131);
+    box-shadow: 5px 5px 5px rgb(15, 68, 76);
+    display: inline-block;
+    vertical-align: top;
+    width: 20rem;
+    background-color: white;
+}
+.coin-card h3 {
+    clear: right;
+    padding-top: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.coin-card button {
+    background-color: rgb(94, 141, 131);
+    color: white;
+}
+.coin-card i {
+    color: rgb(15, 68, 76);
+}
+.more-info-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+
+/************** Canvas Chart **************/
+.canvasjs-chart-canvas {
+    margin-top: 15px;
+    border-radius: 5px;
+    border: solid 2px rgb(17, 69, 56);
+    box-shadow: 4px 4px 8px  rgb(17, 69, 56);
+}
+.canvasjs-chart-toolbar button {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+/************* Checkbox Switch Slider **************/
+
+/* The switch - the box around the slider */
+.switch {
+    float: right;
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: rgb(15, 68, 76);
+} 
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/************** Modal **************/
+.modal-content {
+    border: solid 3px rgb(17, 69, 56);
+}
+.modal-header {
+    display: block;
+    text-align: center;
+    border-bottom: solid 3px rgb(17, 69, 56);
+}
+.modal-header p {
+    padding: 0;
+    margin: 0;
+    font-size: x-large;
+}
+.modal-footer {
+    border: none;
+}
+.modal-btn {
+    color:  rgb(22, 29, 35);
+    font-size: large;
+    background-color: white;
+    border-radius: 4px;
+    border: solid 1px rgb(17, 69, 56);
+    box-shadow: 3px 3px rgb(17, 69, 56);
+    padding: 10px;
+}
+.modal-btn:hover {
+    box-shadow: 3px 3px 3px rgb(17, 69, 56);
+}
+.modal-btn:active {
+    box-shadow: 1px 1px rgb(22, 29, 35);;
+}
+.modal-btn:disabled:hover {
+    box-shadow: 3px 3px rgb(17, 69, 56);
+}
+.modal-coin-card {
+    width: 15rem;
+    margin: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+/************* Media Query **************/
+@media only screen and (max-width: 1366px) {
+    .logo {
+        width: 55%;
+    }
+    .modal-coin-card {
+        width: 12rem;
+    }   
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        padding-top: 190px;
+    }
+    .navbar {
+        background-color: white;
+    }
+    .logo {
+        width: 60%;
+    }
+    .coin-card {
+        width: 18rem;
+    }
+    .modal-coin-card {
+        width: 12rem;
+    }
+}
+
+@media only screen and (max-width: 812px) {
+    body {
+        padding-top: 170px;
+    }
+    .logo {
+        width: 65%;
+    }
+    .coin-card {
+        width: 15rem;
+    }
+    .modal-header p {
+        font-size: large;
+    }
+    .modal-coin-card {
+        width: 10rem;
+    }
+    .error-msg h3 {
+        font-size: medium;
+    }
+    #searchCoinInput {
+        width: 20px;
+        border: none;
+        background-color: transparent;
+    }
+    #searchCoinInput:focus {
+        width: 170px;
+        border: solid 3px rgb(188, 197, 180);
+        border-radius: 5px;
+        outline: none;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .logo {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding-top: 190px;
+    }
+    .navbar button {
+        font-size: 30px;
+    }
+    .about-text {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .logo { 
+        width: 90%;
+    }
+    .navbar button { 
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body { 
+        padding-top: 150px;
+    }
+    .logo { 
+        width: 100%; 
+    }
+    .modal-coin-card { 
+        width: 10rem;
+    }
+    .navbar-right {
+        top: 10px;
+        right: 5px;
+    }
+    .about-text {
+        overflow: auto;
+        display: block;
+    }
+    .about-text img {
+        width: 250px;
+    }
+    .error-msg {
+        width: 80%;
+    }
+}
+
+/************* Alert *************/
+.alert {
+    background: #ffdb9b;
+    padding: 20px 40px;
+    min-width: 360px;
+    position: absolute;
+    top: 15px;
+    overflow: hidden;
+    border-radius: 4px;
+    border-left: 8px solid #ffa502;
+}
+.alert.show {
+    animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide {
+    0%{
+        transform: translateY(-100%);
+    }
+    40%{
+        transform: translateY(15%);
+    }
+    80%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+.alert .fa-exclamation-circle{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ce8500;
+    font-size: 30px;
+}
+.alert .msg {
+    padding: 0 20px;
+    font-size: 18px;
+    color: #ce8500;
+}
+.alert .close-btn {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffd080;
+    padding: 20px 18px;
+    cursor: pointer;
+}
+.close-btn:hover {
+    background: #ffc766;
+}
+.close-btn .fa-times {
+    color: #ce8500;
+    font-size: 22px;
+    line-height: 40px;
+}
+

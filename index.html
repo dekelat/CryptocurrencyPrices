@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Crushed' rel='stylesheet'>
+
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Bootstarp CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <!-- My Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <title>CRYPTONITE</title>
+    <link rel="icon" href="sources/euro-coin-2144.ico" />
+</head>
+
+<body>
+    <div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar fixed-top navbar-transparent justify-content-center">
+
+            <!-- Alerts -->
+            <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">You need to select at least one coin!</span>
+                <span class="close-btn" onclick="onCloseAlert()">
+                    <span class="fas fa-times"></span>
+                </span>
+            </div>
+
+            <!-- Search -->
+            <div class="navbar-right">
+                <div class="inner-addon right-addon">
+                    <input type="text" id="searchCoinInput" placeholder="search coin by symbol"
+                        onkeyup="onKeySearchCoin(this)" onclick="onHome()" />
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <!-- Title Logo-->
+            <div class="text-center">
+                <img src="sources/criptoniteLogo.png" class="logo">
+            </div>
+
+            <!-- Navigation Menu-->
+            <div>
+                <button class="navbar-button" id="homeButton" onclick="onHome()">HOME</button>
+                <span class="dot"></span>
+                <button class="navbar-button" id="liveReportsButton" onclick="onLiveReports()">LIVE REPORTS</button>
+                <span class="dot"></span>
+                <button class="navbar-button" id="aboutButton" onclick="onAbout()">ABOUT</button>
+            </div>
+        </nav>
+
+        <!-- Main Section-->
+        <div id="mainContainer" class="container-fluid text-center">
+            <div id="coinsDisplaySection" class="pb-2">
+
+            </div>
+            <div id="liveReportsSection" class="hide">
+                <div id="chartContainer" class="hide">
+
+                </div>
+            </div>
+            <div id="aboutSection" class="hide">
+                <div class="about-text container mt-3">
+                    <p>
+                        <span>Hi! I'm Dekel</span> <br>
+                        I am 27 years old, and I live in Beit Shemesh. <br>
+                        In my spare time I enjoy reading (mostly crime thrillers)
+                        and drawing.<br>
+                        Been drawing ever since I could held my crayons properly.
+                        Went to advanced classes when I was 7, <br>and in high school I
+                        participated in a 3 year program in Bezalel, where I got to experience and
+                        explore other asspects of art.<br>
+                        Enough about me.. Hope you enjoyed this picture of my dog :)
+                    </p>
+                    <img src="sources/buster.jpeg" />
+                </div>
+            </div>
+            <div class="page-load">
+                <img src="sources/bouncingCoin.gif"/>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="toggleSelectionModal" class="modal fade" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered mw-100 w-50">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="text-uppercase font-weight-bold">You can only choose
+                            up to 5 coins</p>
+                        <p>Please remove at least one of the following</p>
+                    </div>
+                    <div class="modal-body text-center">
+                        <!-- Selected coins will be displayed here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button class="modal-btn" id="modalCloseButton" onclick="onCloseModal()">CLOSE</button>
+                        <button class="modal-btn" id="modalSaveButton" onclick="onSaveChangesModal()" disabled>SAVE
+                            CHANGES</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
